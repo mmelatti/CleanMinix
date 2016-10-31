@@ -32,7 +32,7 @@ PROGRAMS+= ${PROGROOT}/servers/mfs/mfs
 PROGRAMS+= ${PROGROOT}/servers/vm/vm
 PROGRAMS+= ${PROGROOT}/servers/pfs/pfs
 PROGRAMS+= ${PROGROOT}/servers/init/init
-
+PROGRAMS+= ${PROGROOT}/servers/ss/ss
 usage:	
 	@echo " " >&2
 	@echo "Master Makefile to create new MINIX configuration." >& 2

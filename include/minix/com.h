@@ -27,7 +27,7 @@
  *   0x1400 - 0x14FF	VFS-FS transaction IDs
  *   0x1500 - 0x15FF	Block device requests and responses
  *   0x1600 - 0x16FF	VirtualBox (VBOX) requests (see vboxif.h)
- *
+ *   
  * Zero and negative values are widely used for OK and error responses.
  */
 
@@ -80,7 +80,8 @@
 #define VM_PROC_NR   ((endpoint_t) 8)   /* memory server */
 #define PFS_PROC_NR  ((endpoint_t) 9)  /* pipe filesystem */
 #define SCHED_PROC_NR ((endpoint_t) 10)	/* scheduler */
-#define LAST_SPECIAL_PROC_NR	11	/* An untyped version for
+#define SS_PROC_NR    ((endpoint_t) 11)
+#define LAST_SPECIAL_PROC_NR	12	/* An untyped version for
                                            computation in macros.*/
 #define INIT_PROC_NR ((endpoint_t) LAST_SPECIAL_PROC_NR)  /* init
                                                         -- goes multiuser */
@@ -721,6 +722,7 @@
 #define DS_DELETE	(DS_RQ_BASE + 4)	/* delete data */
 #define DS_SNAPSHOT	(DS_RQ_BASE + 5)	/* take a snapshot */
 #define DS_RETRIEVE_LABEL  (DS_RQ_BASE + 6)	/* retrieve label's name */
+#define SEMA_INIT	(DS_RQ_BASE + 7) /* Michael Semaphore */
 
 /* DS field names */
 #  define DS_KEY_GRANT		m2_i1		/* key for the data */
@@ -1281,3 +1283,10 @@
 #  define BDEV_FORCEWRITE	0x01	/* force write to disk immediately */
 
 /* _MINIX_COM_H */
+
+/*------------------- Michael Melatti ----------------*/
+
+/* #define SS_RQ_BASE 0x1700 */
+
+/* #define SEMA_INIT (SS_RQ_BASE + 0) */
+

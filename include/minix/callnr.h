@@ -35,7 +35,7 @@
 #define SETGROUPS	  32
 #define ACCESS		  33
 #define GETGROUPS	  34
-#define SEMA_INIT  35
+#define SEMA_INIT         35
 #define SYNC		  36
 #define KILL		  37
 #define RENAME		  38
